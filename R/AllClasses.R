@@ -90,7 +90,7 @@ setMethod("taxIdUniprots", "UniProt.ws",
 
 ## Helper to retrieve Uniprot IDs and cache them
 .getUniprots <- function(taxId=9606) {
-    url <- 'https://www.uniprot.org/uniprot/?query=organism:'
+    url <- 'https://www.uniprot.org/uniprot/?query=organism_id:'
     idUrl <- paste0(url, taxId, "&format=tab&columns=id")
     ## Now return that data
     readLines(idUrl)[-1]
